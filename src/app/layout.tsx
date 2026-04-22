@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   title: "DSTRTO CITY | FiveM Roleplay",
   description: "A premium GTA V FiveM roleplay website for DSTRTO CITY with immersive branding, community onboarding, and music controls.",
   metadataBase: new URL("https://dstrtocity.example"),
+  icons: {
+    icon: "/brand/DSTRTO2.png",
+    apple: "/brand/DSTRTO2.png"
+  },
   openGraph: {
     title: "DSTRTO CITY | FiveM Roleplay",
     description: "Your Story Begins Here.",
