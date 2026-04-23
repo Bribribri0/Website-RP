@@ -1,6 +1,7 @@
 export const navLinks = [
   { label: "Features", href: "/#features" },
   { label: "How to Join", href: "/#join" },
+  { label: "Donations", href: "/#donations" },
   { label: "Gallery", href: "/#gallery" },
   { label: "Status", href: "/#status" },
   { label: "Community", href: "/#community" }

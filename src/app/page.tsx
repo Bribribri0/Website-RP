@@ -1,4 +1,5 @@
 import { Community } from "@/components/community";
+import { Donations } from "@/components/donations";
 import { Features } from "@/components/features";
 import { Gallery } from "@/components/gallery";
 import { Hero } from "@/components/hero";
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Hero />
       <Features />
       <JoinGuide />
+      <Donations />
       <Gallery />
       <ServerStatus />
       <Community />

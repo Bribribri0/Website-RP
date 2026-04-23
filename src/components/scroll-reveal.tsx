@@ -28,13 +28,8 @@ export function ScrollReveal() {
     );
 
     const targets = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
-    let armed = false;
 
     const armReveal = () => {
-      if (armed) {
-        return;
-      }
-      armed = true;
       document.body.classList.add("reveal-ready");
 
       targets.forEach((element) => {
@@ -46,22 +41,13 @@ export function ScrollReveal() {
       });
     };
 
-    const armOnNextFrame = () => {
+    window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
-        window.requestAnimationFrame(() => {
-          armReveal();
-        });
+        armReveal();
       });
-    };
-
-    window.addEventListener("scroll", armOnNextFrame, { once: true, passive: true });
-    window.addEventListener("touchstart", armOnNextFrame, { once: true, passive: true });
-    window.addEventListener("keydown", armOnNextFrame, { once: true });
+    });
 
     return () => {
-      window.removeEventListener("scroll", armOnNextFrame);
-      window.removeEventListener("touchstart", armOnNextFrame);
-      window.removeEventListener("keydown", armOnNextFrame);
       observer.disconnect();
     };
   }, []);
