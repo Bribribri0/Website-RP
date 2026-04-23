@@ -1,5 +1,6 @@
 import { Community } from "@/components/community";
 import { Donations } from "@/components/donations";
+import { Exclusives } from "@/components/exclusives";
 import { Features } from "@/components/features";
 import { Gallery } from "@/components/gallery";
 import { Hero } from "@/components/hero";
@@ -8,10 +9,11 @@ import { ServerStatus } from "@/components/server-status";
 
 export default function HomePage() {
   return (
-    <main className="bg-[#03020a] text-white">
+    <main className="text-white">
       <Hero />
       <Features />
       <JoinGuide />
+      <Exclusives />
       <Donations />
       <Gallery />
       <ServerStatus />

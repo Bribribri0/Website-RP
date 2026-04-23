@@ -6,6 +6,7 @@
   --muted: #9aa6b2;
   --brand: #0cecf4;
   --brand-soft: rgba(12, 236, 244, 0.14);
+  --bg-shift: 0px;
 }
 
 html {
@@ -15,11 +16,21 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(12, 236, 244, 0.08), transparent 28%),
-    radial-gradient(circle at 20% 20%, rgba(119, 88, 255, 0.12), transparent 22%),
-    linear-gradient(180deg, #07050f 0%, #03020a 45%, #020109 100%);
+    radial-gradient(circle at 20% 15%, rgba(12, 236, 244, 0.25), transparent 42%),
+    radial-gradient(circle at 80% 10%, rgba(0, 170, 255, 0.2), transparent 46%),
+    linear-gradient(180deg, rgba(2, 1, 9, 0.88) 0%, rgba(3, 6, 21, 0.9) 55%, rgba(2, 1, 9, 0.96) 100%),
+    url("/background/bg.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
+  position: relative;
+}
+
+section[id] {
+  scroll-margin-top: 96px;
 }
 
 h1,
