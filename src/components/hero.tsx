@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ChevronRight, ExternalLink } from "lucide-react";
+
+import { ServerStatus } from "@/components/server-status";
 import { heroHighlights } from "@/lib/site-data";
 
 export function Hero() {
@@ -44,6 +46,15 @@ export function Hero() {
                 {item}
               </div>
             ))}
+          </div>
+          <div className="mt-10 space-y-4" data-reveal data-reveal-direction="left" data-reveal-delay="4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/60">Server status</p>
+              <p className="mt-2 max-w-xl text-sm leading-7 text-slate-400">
+                Live player counts from the CFX listing when configured—same pulse as the in-game browser.
+              </p>
+            </div>
+            <ServerStatus id="status" />
           </div>
         </div>
         <div className="relative" data-reveal data-reveal-direction="right">

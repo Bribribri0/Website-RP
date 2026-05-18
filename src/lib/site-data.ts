@@ -3,7 +3,7 @@ export const navLinks = [
   { label: "How to Join", href: "/#join" },
   { label: "Donations", href: "/#donations" },
   { label: "Gallery", href: "/#gallery" },
-  { label: "Status", href: "/#status" },
+  { label: "Admins", href: "/#admins" },
   { label: "Community", href: "/#community" }
 ];
 
